@@ -1,5 +1,4 @@
 #include<iostream>
-#include<conio.h>
 #include<stdlib.h>
 
 using namespace std;
@@ -8,11 +7,11 @@ void copy_arr(char s[], char t[],int n)
 {
     for (int i=0;i<n;i++)
     {
-        s[n+i]=t[i];
+        s[i]=t[i];
     }
-    for (int i=0;i<n*2;i++)
+    for (int i=0;i<n;i++)
     {
-        cout<<s[i]<<" ";
+        cout<<s[i];
     }
 }
 
@@ -20,7 +19,7 @@ int main()
 {
     int n;
     char v;
-    cout<<"Ingrese el tamaño de los arrays : ";cin>>n;
+    cout<<"Ingrese el tamaÃ±o de los arrays : ";cin>>n;
     char s[n];
     char t[n];
     cout<<"Primera Palabra"<<endl;
@@ -39,3 +38,4 @@ int main()
 
     return 0;
 }
+
