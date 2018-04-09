@@ -3,17 +3,17 @@
 
 using namespace std;
 
-bool Palindromo(char palabra[],int,int);
+bool Palindromo(char cad[],int,int);
 
 int main(){
-    char palabra[15];
+    char cad[15];
     int tamano;
     bool pal;
-    cout<<"Ingrese una palabra: "<<endl;
-    cin.getline(palabra,50);
-    tamano=strlen(palabra);
+    cout<<"Ingrese una cadena: "<<endl;
+    cin.getline(cad,50);
+    tamano=strlen(cad);
 
-    pal=Palindromo(palabra,0,tamano-1);
+    pal=Palindromo(cad,0,tamano-1);
 
     if(pal==true)
         cout<<"Es palindromo"<<endl;
@@ -22,11 +22,11 @@ int main(){
 
     return 0;
 }
-bool Palindromo(char palabra[],int pri,int ult){
+bool Palindromo(char cad[],int pri,int ult){
     if(pri>=ult)
         return true;
-    if(palabra[pri]==palabra[ult])
-        Palindromo(palabra,pri+1,ult-1);
+    if(cad[pri]==cad[ult])
+        Palindromo(cad,pri+1,ult-1);
     else
         return false;
 }
